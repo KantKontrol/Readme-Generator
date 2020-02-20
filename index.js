@@ -23,6 +23,8 @@ prompt(questions).then(response => {
 });
 
 function writeToFile(fileName, data) {
+
+    
 }
 
 function init() {
