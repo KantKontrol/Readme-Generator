@@ -16,7 +16,7 @@ var prompt = inquire.createPromptModule();
 prompt(questions).then(response => {
 
   
-    console.log(gitAPI.api.getUser(response.username));
+    gitAPI.api.getUser(response.username);
     
 
 
@@ -24,7 +24,7 @@ prompt(questions).then(response => {
 
 function writeToFile(fileName, data) {
 
-    
+
 }
 
 function init() {

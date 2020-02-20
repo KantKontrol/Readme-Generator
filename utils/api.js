@@ -10,8 +10,8 @@ const api = {
 
       //console.log(response);
 
-      console.log(`Avatar URL: ${response.data.avatar_url}`);
-
+      console.log(`User Avatar URL: ${response.data.avatar_url}`);
+      console.log(`User Email: ${response.data.email}`);
 
      });
 
