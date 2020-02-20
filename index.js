@@ -3,17 +3,17 @@ let gitAPI = require("./utils/api");
 
 
 const questions = [
+    { 
+        type: "input",
+        message: "What is your github username?",
+        name: "username"
+    }
 
 ];
 
-inquire.prompt([
-{ 
-    type: "input",
-    message: "What is your github username?",
-    name: "username"
-}
+var prompt = inquire.createPromptModule();
 
-]).then(response => {
+prompt(questions).then(response => {
 
   
     console.log(gitAPI.api.getUser(response.username));
