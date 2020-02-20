@@ -1,7 +1,10 @@
 const api = {
-  getUser(username) {
-
+   getUser: function(username) {
+    console.log(username);
+    return "done";
   }
 };
 
-module.exports = api;
+module.exports = {
+  api: api
+};
