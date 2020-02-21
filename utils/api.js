@@ -1,13 +1,8 @@
 let axios = require("axios");
-
-
-
-
+const util = require("util");
 
 
 const api = {
-
-  
 
   getInfo: function(username, repoName) {
 
@@ -19,25 +14,36 @@ const api = {
         method: 'get',
         headers:{
           'User-Agent': 'KantKontrol'
+        },
+        auth: {
+          username: 'KantKontrol',
+          password: '0a911b1d6452bb7b0599a45ef3c9ce44008bf56d'
         }
       };
 
-      axios.get(queryURL,config).then(function(response){
+      axios.get(queryURL1, config).then(function(response){
 
+
+        console.log(response.data.name);
+        console.log(response.data.email);
+    
+    
+        return axios.get(queryURL2, config);
+      }).then(function(response){
+    
         let retrieved = response.data.filter(e => e.name.toLowerCase() == repoName.toLowerCase());
-
+    
         console.log(retrieved);
+    
+    
+      }).catch(function(error){
+    
+        console.log(error);
+      })
 
-        //let data = [];
-
-        //data.push(retrieved)
-  
-        }).catch(function(error){
-
-          console.log(error);
-        })
   }
-};
+}
+
 
 module.exports = {
   api: api

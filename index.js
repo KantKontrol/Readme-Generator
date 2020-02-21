@@ -21,7 +21,7 @@ var prompt = inquire.createPromptModule();
 prompt(questions).then(response => {
 
   
-    gitAPI.api.getUser(response.username, response.repoName);
+    gitAPI.api.getInfo(response.username, response.repoName);
     
 
 
