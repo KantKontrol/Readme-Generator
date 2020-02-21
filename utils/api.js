@@ -1,47 +1,41 @@
 let axios = require("axios");
 
 
-let queryURL = "https://api.github.com/users/";
+
 
 
 
 const api = {
-   getUser: function(username, password) {
-     queryURL+=username;
+
+  
+
+  getInfo: function(username, repoName) {
+
+     let queryURL1 = `https://api.github.com/users/${username}`;
+
+     let queryURL2 = `https://api.github.com/users/${username}/repos`;
 
      const config = {
-       method: 'get',
-       headers:{
-        'User-Agent': username
-       },
-       auth: {
-         username: username,
-         password: password
-       }
-
-
+        method: 'get',
+        headers:{
+          'User-Agent': 'KantKontrol'
+        }
       };
 
-     
-        console.log(queryURL);
-        axios.get(queryURL,config).then(function(response){
+      axios.get(queryURL,config).then(function(response){
 
-          console.log(response.data);
-    
-    
-          //console.log(`User Avatar URL: ${response.data.avatar_url}`);
-          //console.log(`User Email: ${response.data.email}`);
-    
-         }).catch(function(error){
+        let retrieved = response.data.filter(e => e.name.toLowerCase() == repoName.toLowerCase());
 
-           console.log(error);
-         })
-    
+        console.log(retrieved);
 
-      
-        
-      
+        //let data = [];
 
+        //data.push(retrieved)
+  
+        }).catch(function(error){
+
+          console.log(error);
+        })
   }
 };
 

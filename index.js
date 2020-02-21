@@ -9,9 +9,9 @@ const questions = [
         name: "username"
     },
     { 
-        type: "password",
-        message: "What is your github password?",
-        name: "password"
+        type: "input",
+        message: "What is your github repo?",
+        name: "repoName"
     }
 
 ];
@@ -21,7 +21,7 @@ var prompt = inquire.createPromptModule();
 prompt(questions).then(response => {
 
   
-    gitAPI.api.getUser(response.username, response.password);
+    gitAPI.api.getUser(response.username, response.repoName);
     
 
 
