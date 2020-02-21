@@ -17,7 +17,7 @@ const api = {
         },
         auth: {
           username: 'KantKontrol',
-          password: '0a911b1d6452bb7b0599a45ef3c9ce44008bf56d'
+          password: ''
         }
       };
 
