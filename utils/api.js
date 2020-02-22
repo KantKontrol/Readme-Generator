@@ -10,20 +10,18 @@ const api = {
 
      let queryURL2 = `https://api.github.com/users/${username}/repos`;
 
+     console.log('api token ' , process.env.API_TOKEN)
      const config = {
         method: 'get',
         headers:{
-          'User-Agent': 'KantKontrol'
+          'Authorization': `token ${process.env.API_TOKEN}`
+
         },
-        auth: {
-          username: 'KantKontrol',
-          password: ''
-        }
       };
 
       axios.get(queryURL1, config).then(function(response){
 
-
+        console.log('response' , response)
         console.log(response.data.name);
         console.log(response.data.email);
     

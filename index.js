@@ -1,5 +1,6 @@
 let inquire = require("inquirer");
 let gitAPI = require("./utils/api");
+require('dotenv').config()
 
 
 const questions = [
