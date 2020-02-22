@@ -24,8 +24,7 @@ const api = {
         console.log('response' , response)
         console.log(response.data.name);
         console.log(response.data.email);
-    
-    
+  
         return axios.get(queryURL2, config);
       }).then(function(response){
     
@@ -35,9 +34,13 @@ const api = {
     
     
       }).catch(function(error){
-    
         console.log(error);
       })
+
+  },
+  dataSet: {
+    //have an object for data that will be passed on to the write process
+
 
   }
 }
