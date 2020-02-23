@@ -20,15 +20,18 @@ const api = {
       };
 
       axios.get(queryURL1, config).then(function(response){
-
-        console.log('response' , response)
-        console.log(response.data.name);
-        console.log(response.data.email);
+    
+        console.log(response.data);
+        this.dataSet.email = response.data.email;
+        this.dataSet.picURL = response.data.avatar_url;
   
         return axios.get(queryURL2, config);
       }).then(function(response){
     
         let retrieved = response.data.filter(e => e.name.toLowerCase() == repoName.toLowerCase());
+
+
+        
     
         console.log(retrieved);
     
@@ -39,9 +42,12 @@ const api = {
 
   },
   dataSet: {
+    email: "",
+    picURL: "",
+    projectTitle: "",
+    desc: ""
+
     //have an object for data that will be passed on to the write process
-
-
   }
 }
 
