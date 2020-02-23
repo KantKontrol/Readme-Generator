@@ -1,15 +1,19 @@
 
-# Project 1
+# d
 
 ## Description
-this project returns weather data
+d
 
 ## Usage
-Go to the website and input the city for the weather
+d
 
 ## Credits
 
 Owner: KantKontrol Email: nick.derissio.tech@gmail.com
 
-Jack John George
+![alt](https://avatars0.githubusercontent.com/u/57921318?v=4)
+
+d
+
+## Badges
 
