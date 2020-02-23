@@ -1,5 +1,6 @@
 let inquire = require("inquirer");
 let gitAPI = require("./utils/api");
+const gm = require("./utils/generateMarkdown");
 const util = require("util");
 require('dotenv').config()
 
@@ -12,10 +13,19 @@ const questions = [
     },
     { 
         type: "input",
-        message: "What is your github repo?",
-        name: "repoName"
+        message: "What is the name of the repo?",
+        name: "title"
+    },
+    { 
+        type: "input",
+        message: "what do you want the description to be?",
+        name: "desc"
+    },
+    { 
+        type: "input",
+        message: "what do you want the description to be?",
+        name: "desc"
     }
-
 ];
 
 
