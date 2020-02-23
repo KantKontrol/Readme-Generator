@@ -24,6 +24,8 @@ Owner: ${data.username} Email: ${data.email}
 
 ![alt](${data.picURL})
 
+### Other Contributors
+
 ${data.contributors}
 
 ## Badges
