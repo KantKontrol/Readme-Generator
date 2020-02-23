@@ -1,4 +1,5 @@
 let inquire = require("inquirer");
+const fs = require("fs");
 let gitAPI = require("./utils/api");
 const gm = require("./utils/generateMarkdown");
 const util = require("util");
@@ -29,9 +30,15 @@ const questions = [
 ];
 
 
-function writeToFile(fileName, data) {
+async function writeToFile(fileName, data) {
 
+    let markDown = await gm.generate(data);
 
+    fs.writeFile(fileName, markDown, function(err){
+        if(err){
+            console.log(err);
+        }
+    });
 }
 
 async function init() {
@@ -40,8 +47,13 @@ async function init() {
     let response = await prompt(questions);
 
     let data = await gitAPI.api.getInfo(response.username);
+
+    data.title = response.title;
+    data.desc = response.desc;
             
     console.log(data);
+
+    writeToFile("readme.md", data);
     
 }
 
