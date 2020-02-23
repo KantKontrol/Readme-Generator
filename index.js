@@ -24,8 +24,13 @@ const questions = [
     },
     { 
         type: "input",
-        message: "what do you want the description to be?",
-        name: "desc"
+        message: "How do you use your project?",
+        name: "usage"
+    },
+    { 
+        type: "input",
+        message: "Are there more contributors?",
+        name: "contributors"
     }
 ];
 
@@ -48,8 +53,13 @@ async function init() {
 
     let data = await gitAPI.api.getInfo(response.username);
 
+    data.username = response.username;
     data.title = response.title;
     data.desc = response.desc;
+    data.usage = response.usage;
+    data.contributors = response.contributors;
+
+    console.log(data.title);
             
     console.log(data);
 

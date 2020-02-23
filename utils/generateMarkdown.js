@@ -4,7 +4,20 @@ const badges = require("gh-badges");
 function generateMarkdown(data) {
   return `
 # ${data.title}
-# ${data.desc}
+
+## Description
+${data.desc}
+
+## Usage
+${data.usage}
+
+## Credits
+
+Owner: ${data.username} Email: ${data.email}
+
+${data.contributors}
+
+## Badges
 
 `;
 }
