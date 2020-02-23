@@ -5,6 +5,13 @@ function generateMarkdown(data) {
   return `
 # ${data.title}
 
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+
 ## Description
 ${data.desc}
 
@@ -20,6 +27,8 @@ Owner: ${data.username} Email: ${data.email}
 ${data.contributors}
 
 ## Badges
+
+![alt](https://img.shields.io/badge/build-passing-brightgreen)
 
 `;
 }
