@@ -1,5 +1,6 @@
 let inquire = require("inquirer");
 let gitAPI = require("./utils/api");
+const util = require("util");
 require('dotenv').config()
 
 
@@ -17,24 +18,21 @@ const questions = [
 
 ];
 
-var prompt = inquire.createPromptModule();
-
-prompt(questions).then(response => {
-
-  
-    let data = gitAPI.api.getInfo(response.username);
-    
-
-
-});
 
 function writeToFile(fileName, data) {
 
 
 }
 
-function init() {
+async function init() {
 
+    var prompt = inquire.createPromptModule();
+    let response = await prompt(questions);
+
+    let data = await gitAPI.api.getInfo(response.username);
+            
+    console.log(data);
+    
 }
 
 init();

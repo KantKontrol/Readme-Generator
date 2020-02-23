@@ -1,14 +1,8 @@
 let axios = require("axios");
-const util = require("util");
 
 const api = {
 
-  dataSet: {
-    email: "",
-    picURL: "",
-  },
-
-  getInfo: function(username) {
+  getInfo: async function(username) {
 
      let queryURL1 = `https://api.github.com/users/${username}`;
 
@@ -20,14 +14,9 @@ const api = {
         },
       };
 
-      axios.get(queryURL1, config).then(function(response){
-      
-        api.dataSet.email = response.data.email;
-        api.dataSet.picURL = response.data.avatar_url;
-  
-      });
-      
-      return this.dataSet;
+      let response = await axios.get(queryURL1, config);
+
+      return { email: response.data.email, picURL: response.data.avatar_url};
   }
 }
 
