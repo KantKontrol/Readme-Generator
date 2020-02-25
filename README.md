@@ -11,15 +11,15 @@
 ## Description
 A simple program used to generate readmes
 
-##Installation
+## Installation
 git clone, npm install
 
 ## Usage
-run the program using 'node index.js' then follow the prompts!
+use 'node index.js' then follow the promtps!
 
 ## License
 
-No Licenses were used
+No licenses were used
 
 ## Credits
 
@@ -29,5 +29,5 @@ Owner: KantKontrol Email: nick.derissio.tech@gmail.com
 
 ### Other Contributors
 
-There are no other contributors
+No other contributors
 
