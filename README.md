@@ -1,5 +1,5 @@
 
-# ReadME-Generator ![alt](https://img.shields.io/badge/build-passing-brightgreen)
+# Read-ME Generator ![alt](https://img.shields.io/badge/build-passing-brightgreen)
 
 ## Table of Contents
 
@@ -9,14 +9,14 @@
 * [License](#license)
 
 ## Description
-test
+A program used to generate a read me
 
 ## Usage
-test
+Clone the repo, npm install, then node index.js
 
-## Licenses
+## License
 
-test
+No licenses were used
 
 ## Credits
 
@@ -26,5 +26,5 @@ Owner: KantKontrol Email: nick.derissio.tech@gmail.com
 
 ### Other Contributors
 
-test
+
 
