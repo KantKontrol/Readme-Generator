@@ -24,6 +24,11 @@ const questions = [
     },
     { 
         type: "input",
+        message: "how do you install your project?",
+        name: "install"
+    },
+    { 
+        type: "input",
         message: "How do you use your project?",
         name: "usage"
     },
@@ -64,6 +69,7 @@ async function init() {
     data.usage = response.usage;
     data.contributors = response.contributors;
     data.license = response.license;
+    data.install = response.install;
 
     writeToFile("readme.md", data);
     
