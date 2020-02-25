@@ -18,7 +18,7 @@ ${data.desc}
 ## Usage
 ${data.usage}
 
-## Licenses
+## License
 
 ${data.license}
 
