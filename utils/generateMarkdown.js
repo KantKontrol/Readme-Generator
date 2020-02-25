@@ -3,7 +3,7 @@ const badges = require("gh-badges");
 
 function generateMarkdown(data) {
   return `
-# ${data.title}
+# ${data.title} ![alt](https://img.shields.io/badge/build-passing-brightgreen)
 
 ## Table of Contents
 
@@ -18,6 +18,10 @@ ${data.desc}
 ## Usage
 ${data.usage}
 
+## Licenses
+
+${data.license}
+
 ## Credits
 
 Owner: ${data.username} Email: ${data.email}
@@ -27,10 +31,6 @@ Owner: ${data.username} Email: ${data.email}
 ### Other Contributors
 
 ${data.contributors}
-
-## Badges
-
-![alt](https://img.shields.io/badge/build-passing-brightgreen)
 
 `;
 }

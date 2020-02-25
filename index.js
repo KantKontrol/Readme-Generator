@@ -29,6 +29,11 @@ const questions = [
     },
     { 
         type: "input",
+        message: "Did you use any Licenses?",
+        name: "license"
+    },
+    { 
+        type: "input",
         message: "Are there more contributors?",
         name: "contributors"
     }
@@ -58,10 +63,7 @@ async function init() {
     data.desc = response.desc;
     data.usage = response.usage;
     data.contributors = response.contributors;
-
-    console.log(data.title);
-            
-    console.log(data);
+    data.license = response.license;
 
     writeToFile("readme.md", data);
     
